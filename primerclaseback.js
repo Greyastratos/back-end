@@ -1,5 +1,5 @@
 /* Primera entrega Back-end */
-/* 1 Declarar una funcion constructora  llamada Usuario que reciba nombre
+/* 1 Declarar una funcion constructora  llamada Usuario que reciba nombre y apellido
 libros(array de objetos ) y mascotas (array de strings)
 
 getFullName: Debe retomar un string con el nombre y apellido del usuario (utilizar tamplate string)
@@ -10,14 +10,7 @@ getMascotas: debe retomar la cantidad de mascotas que tiene el usuario.
 
 */
 
-const usuario=(nombre,apellido)=>{
-[nombre,apellido]
-}
 
-usuario('martin', 'Carrizo');
-
-
-console.log(usuario);
 
 
 
@@ -50,8 +43,8 @@ getBooks: Suponiendo que el usuario tiene estos libros: [{nombre:'El señor de l
 */
 
 
-function constructor (){
 
-}
+
+
 /* */
 
