@@ -27,15 +27,16 @@ class Archivo  {
          let Objnew = {
              "title":this.title,
              "price":this.price,
-             "tumbnail":this.tumbnail
-         }     
+             "tumbnail":this.tumbnail,
+             "id": 0
+         };    
          try{
             let data = await fs.promises.readFile(this.nombreAarchivo,'utf-8')
             let contenido = JSON.parse(data)
-            Objnew = JSON.stringify(Objnew);
+            Objnew.id = Objnew.id +1;
             contenido.push(Objnew);
             console.log(JSON.stringify(contenido))
-        await fs.promises.appendFile(this.nombreAarchivo,JSON.stringify(contenido))
+        await fs.promises.writeFile(this.nombreAarchivo,JSON.stringify(contenido))
          }
          catch(err){
              console.log('nope' +err )
@@ -44,5 +45,5 @@ class Archivo  {
 }
 
 const pepe = new Archivo('prueba.txt','hola',129,'hola');
-
+pepe.leer();
 pepe.guardar();
